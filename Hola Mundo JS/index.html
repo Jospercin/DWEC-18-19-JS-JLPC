@@ -20,12 +20,79 @@ Click me to display Date and Time.</button>
 
 <p>JavaScript puede cambiar los atributos HTML.</p>
 
-<button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Encender</button> <!-- bulb"on" enciende-->
+<button onclick="document.getElementById('myImage').src='https://www.w3schools.com/js/pic_bulbon.gif'">Encender</button> <!-- bulb"on" enciende-->
 
-<img id="myImage" src="pic_bulboff.gif" style="width:100px"> <!-- id/src/estilo de imagen-->
+<img id="myImage" src="https://www.w3schools.com/js/pic_bulboff.gif" style="width:100px"> <!-- id/src/estilo de imagen-->
 
-<button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Apagar</button> <!-- bulb"off" apaga-->
+<button onclick="document.getElementById('myImage').src='https://www.w3schools.com/js/pic_bulboff.gif'">Apagar</button> <!-- bulb"off" apaga-->
 
+<!-- Para acceder a un elemento HTML, JavaScript puede usar el método document.getElementById(id) -->
+<!-- El atributo id define el elemento HTML. la propiedad innerHTML define el contenido de HTML-->
+
+<!-- JavaScript puede mostrar los datos de diferentes modos
+    Escribir un elemento HTML, usando innerHTML
+    Escribir una salida de HTML usando document.write()
+    Escribir una "alert box", usando window.alert()
+    Escribir en la consola del navegador, usando console.log()-->
+
+<!-- Ejemplo con document.getElementById-->
+<h2>Mi primera página web</h2>
+<p> Resultado </p>
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = 5 + 6 * 7;
+</script>
+
+<!-- los ; separan las sentencias de JavaScript. Pueden separarse varias sentencias en una misma frase.
+ los numeros pueden ser escritos con o sin decimales
+ los strings son texto y pueden escribirse con " " o con ' '
+ JavaScript usa la palabra clave var para la definición de variables-->
+<script>
+    //Ejemplo de definicion de variables. 
+    var x;
+    x = 17;
+    document.getElementById("demo").innerHTML = x;
+    </script>
+
+
+<!--Una función de JavaScript se ejecuta cuando "algo" lo invoca
+Una función JavaScript se define con la función de la palabra clave, seguido por un nombre , seguido de paréntesis () .
+
+Los nombres de funciones pueden contener letras, dígitos, subrayados y signos de dólar-->
+
+
+<h2>JavaScript Funciones</h2>
+
+<p>Llamada a función que realiza un cálculo y devuelve un resultado</p>
+
+<p id="demo"></p>
+
+<script>
+var x = myFunction(4, 3);
+document.getElementById("demo").innerHTML = x;
+
+function myFunction(a, b) {  // llamada a funcion myFunction, con parametros de entrada a,b. (4,3) --> 4 elevado a 3 = 64.
+    return a ** b;
+}
+
+</script>
+
+
+
+<!--Los objetos son variables también. Sin embargo, los objetos pueden contener muchos valores.
+    Los espacios y saltos de línea no son importantes. Una definición de objeto puede abarcar varias líneas.
+    Se puede acceder a las propiedades del objeto de dos maneras: objectName.propertyName o objectName["propertyName"]
+-->
+<!--
+var person = {
+    firstName: "John",      
+    lastName : "Doe",
+    id       : 5566,
+    fullName : function() {
+        return this.firstName + " " + this.lastName;
+    }
+-->
 </body>
 
 
